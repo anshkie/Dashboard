@@ -67,6 +67,7 @@ npm run dev
 
 Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
+Deployed at Vercel : [https://dashboard-gilt-seven-55.vercel.app/dashboard](https://dashboard-gilt-seven-55.vercel.app/dashboard) 
 ---
 
 ## 📂 Folder Structure Overview
