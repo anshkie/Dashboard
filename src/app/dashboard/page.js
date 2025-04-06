@@ -169,20 +169,21 @@ export default function DashboardPage() {
 
 {status === 'succeeded' && articles.length > 0 ? (
         <ul className="space-y-4">
-          {articles.map((article, index) => (
-            <li key={index} className="bg-white p-4 border rounded shadow hover:bg-yellow-50 transition">
-              <a
-                href={article.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline font-medium"
-              >
-                {article.title}
-              </a>
-              <p className="text-sm text-gray-500 mt-1">{article.pubDate}</p>
-            </li>
-          ))}
-        </ul>
+        {articles.slice(0, 5).map((article, index) => (
+          <li key={index} className="bg-white p-4 border rounded shadow hover:bg-yellow-50 transition">
+            <a
+              href={article.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline font-medium"
+            >
+              {article.title}
+            </a>
+            <p className="text-sm text-gray-500 mt-1">{article.pubDate}</p>
+          </li>
+        ))}
+      </ul>
+      
 ):status === 'succeeded' ? (
   <p>No articles found.</p>
 ) : null}

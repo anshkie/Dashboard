@@ -6,7 +6,7 @@ export const fetchNews = createAsyncThunk(
   async (query, { rejectWithValue }) => {
     try {
       const res = await fetch(
-        `https://newsdata.io/api/1/news?apikey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}&q=undefined&language=en
+        `https://newsdata.io/api/1/news?apikey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}&q=${query}&language=en
 `
       );
       if (!res.ok) {
